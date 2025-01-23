@@ -13,8 +13,8 @@ def afficher_courbes_performance_csv(fichier_csv):
             
             # Extractionles valeurs des différentes colonnes
             epochs = data['epoch']
-            train_loss = data['train/box_loss']  # Utilisation de la perte d'entraînement
-            val_loss = data['val/box_loss']  # Utilisation de la perte de validation
+            train_loss = data['train/box_loss']  
+            val_loss = data['val/box_loss']  
             precision = data['metrics/precision(B)']
             recall = data['metrics/recall(B)']
             mAP_50 = data['metrics/mAP50(B)']
