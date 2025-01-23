@@ -4,10 +4,10 @@ from ultralytics import YOLO
 
 # Chemin vers le fichier .yaml et le dossier cible sur le Bureau
 data_yaml_path = r"C:\Users\etudiant\Desktop\Object_Tracking\Object_Tracking.v1i.yolov8\data.yaml"
-desktop_path = r"C:\Users\etudiant\Desktop\object_tracking_model"  # Sauvegarder le modèle sur le Bureau
+desktop_path = r"C:\Users\etudiant\Desktop\object_tracking_model"  
 
-# Charger le modèle YOLOv8 pré-entraîné
-model = YOLO("yolov8n.pt")  # Utilisez "yolov8s.pt", "yolov8m.pt", etc., pour des versions plus grandes
+# Chargement du modèle YOLOv8 pré-entraîné
+model = YOLO("yolov8n.pt") 
 
 # Lancer l'entraînement
 train_params = {
@@ -22,7 +22,7 @@ train_params = {
 print(f"Entraînement en cours... Les résultats seront sauvegardés dans : {desktop_path}")
 model.train(**train_params)
 
-# Déplacer les résultats vers le Bureau si nécessaire
+# Déplacement des résultats vers le Bureau si nécessaire
 source_path = f"runs/detect/{desktop_path.split('/')[-1]}"
 shutil.move(source_path, desktop_path)
 print(f"Résultats déplacés vers : {desktop_path}")
