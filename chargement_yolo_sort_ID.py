@@ -9,7 +9,7 @@ from sort import Sort
 
 
 # Chargement le modèle YOLOv8
-model = YOLO(r"C:\Users\etudiant\Desktop\object_tracking_model\weights\best.pt")  # Remplacez par votre modèle
+model = YOLO(r"C:\Users\etudiant\Desktop\object_tracking_model\weights\best.pt") 
 
 # Initialisation le tracker SORT
 tracker = Sort()
