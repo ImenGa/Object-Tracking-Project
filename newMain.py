@@ -10,7 +10,7 @@ def train_model():
     # Chargement le modèle YOLOv8 pré-entraîné
     model = YOLO("yolov8n.pt")  
 
-    # Lancer l'entraînement
+    # Lancement de  l'entraînement
     train_params = {
         "data": data_yaml_path,    # Chemin vers le fichier .yaml
         "epochs": 70,           # Nombre d'époques
