@@ -5,17 +5,17 @@ import os
 video_dir = r"C:\Users\etudiant\Desktop\Object_Tracking\Dataset\videos"
 output_dir = r"C:\Users\etudiant\Desktop\Object_Tracking\Dataset\videos_mp4"
 
-# Création le dossier de sortie s'il n'existe pas
+# Création du dossier de sortie 
 if not os.path.exists(output_dir):
     os.makedirs(output_dir)
 
 # Liste les vidéos .mov
 videos = [f for f in os.listdir(video_dir) if f.endswith(".mov")]
 
-# Spécification le chemin complet de ffmpeg
+# Spécification du chemin complet de ffmpeg
 ffmpeg_path = r"C:\Users\etudiant\Downloads\ffmpeg-master-latest-win64-gpl-shared\ffmpeg-master-latest-win64-gpl-shared\bin\ffmpeg.exe"  
 
-# Convertion chaque vidéo
+# Convertion de chaque vidéo
 for video in videos:
     input_path = os.path.join(video_dir, video)
     output_path = os.path.join(output_dir, video.replace(".mov", ".mp4"))
@@ -23,7 +23,7 @@ for video in videos:
     # Commande pour convertir la vidéo
     command = [ffmpeg_path, "-i", input_path, "-vcodec", "libx264", "-acodec", "aac", output_path]
 
-    # Exécution la commande
+    # Exécution de la commande
     try:
         subprocess.run(command, check=True)
         print(f"Conversion réussie : {video}")
