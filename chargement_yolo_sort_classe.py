@@ -11,7 +11,7 @@ model = YOLO(r"C:\Users\etudiant\Desktop\object_tracking_model3\weights\best.pt"
 # Initialisation du tracker SORT
 tracker = Sort()
 
-# Ouverture de la vidéo ou la séquence d'images
+# Ouverture de la vidéo 
 video_path = r"C:\Users\etudiant\Desktop\Object_Tracking\Dataset\test_videos\01ed3f01-33091fbe.mp4"
 cap = cv2.VideoCapture(video_path)
 
