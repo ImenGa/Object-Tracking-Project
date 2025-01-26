@@ -11,7 +11,7 @@ def afficher_courbes_performance_csv(fichier_csv):
            'metrics/mAP50(B)' in data.columns and 'metrics/mAP50-95(B)' in data.columns and \
            'train/box_loss' in data.columns and 'val/box_loss' in data.columns:
             
-            # Extractionles valeurs des différentes colonnes
+            # Extraction des valeurs des différentes colonnes
             epochs = data['epoch']
             train_loss = data['train/box_loss']  
             val_loss = data['val/box_loss']  
@@ -20,7 +20,7 @@ def afficher_courbes_performance_csv(fichier_csv):
             mAP_50 = data['metrics/mAP50(B)']
             mAP_50_95 = data['metrics/mAP50-95(B)']
             
-            # Tracage les courbes de performance
+            # Tracage des courbes de performance
             plt.figure(figsize=(14, 10))
 
             # Tracage de la courbe de la perte d'entraînement (train loss) et de validation (val loss)
@@ -59,7 +59,7 @@ def afficher_courbes_performance_csv(fichier_csv):
             plt.legend()
             plt.grid(True)
 
-            # Affichage les courbes
+            # Affichage des courbes
             plt.tight_layout()
             plt.show()
 
@@ -69,6 +69,5 @@ def afficher_courbes_performance_csv(fichier_csv):
     except Exception as e:
         print(f"Erreur lors de la lecture du fichier CSV : {e}")
 
-# Remplacez ce chemin par le fichier CSV généré lors de l'entraînement
 fichier_csv = r"C:\Users\etudiant\Desktop\object_tracking_model4\results.csv"
 afficher_courbes_performance_csv(fichier_csv)
