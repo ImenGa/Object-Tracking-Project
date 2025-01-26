@@ -5,11 +5,11 @@ import os
 videos_dir = "./Dataset/test_videos"  # Dossier contenant les vidéos à traiter
 output_dir = "./Dataset/test_videos_frames"  # Dossier pour enregistrer les frames extraites
 
-# Création le dossier de sortie s'il n'existe pas
+# Création du dossier de sortie
 os.makedirs(output_dir, exist_ok=True)
 
-# Lister les fichiers vidéo dans le dossier "test_videos"
-videos = [f for f in os.listdir(videos_dir) if f.endswith(".mp4")]  # Choisir les fichiers .mp4
+# Liste des fichiers vidéo dans le dossier "test_videos"
+videos = [f for f in os.listdir(videos_dir) if f.endswith(".mp4")] 
 
 # Limitation à 10 vidéos
 videos = videos[:5]
