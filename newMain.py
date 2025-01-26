@@ -7,17 +7,17 @@ def train_model():
     data_yaml_path = r"C:\Users\etudiant\Desktop\Object_Tracking\Object_Tracking.v1i.yolov8\data.yaml"
     desktop_path = r"C:\Users\etudiant\Desktop\object_tracking_model"  
 
-    # Chargement le modèle YOLOv8 pré-entraîné
+    # Chargement du modèle YOLOv8 pré-entraîné
     model = YOLO("yolov8n.pt")  
 
     # Lancement de  l'entraînement
     train_params = {
         "data": data_yaml_path,    # Chemin vers le fichier .yaml
-        "epochs": 70,           # Nombre d'époques
-        "imgsz": 640,             # Taille des images
-        "batch": 64,              # Taille du batch
-        "name": desktop_path,     # Sauvegarder les résultats sur le Bureau
-        "workers": 4              # Nombre de threads pour le chargement des données
+        "epochs": 70,           
+        "imgsz": 640,            
+        "batch": 64,              
+        "name": desktop_path,    
+        "workers": 4              
     }
 
     print(f"Entraînement en cours... Les résultats seront sauvegardés dans : {desktop_path}")
