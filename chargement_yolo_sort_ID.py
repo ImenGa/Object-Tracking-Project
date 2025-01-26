@@ -8,13 +8,13 @@ from sort import Sort
 
 
 
-# Chargement le modèle YOLOv8
+# Chargement du modèle YOLOv8
 model = YOLO(r"C:\Users\etudiant\Desktop\object_tracking_model\weights\best.pt") 
 
-# Initialisation le tracker SORT
+# Initialisation du tracker SORT
 tracker = Sort()
 
-# Ouverture de la vidéo ou la séquence d'images
+# Ouverture de la vidéo 
 video_path = r"C:\Users\etudiant\Desktop\Object_Tracking\Dataset\test_videos\001bad4e-2fa8f3b6.mp4"
 cap = cv2.VideoCapture(video_path)
 
